@@ -167,3 +167,18 @@ SELECT players.name, teams.name FROM players, teams WHERE players.team_id=teams.
 SELECT SUM(players.salary) FROM players, teams WHERE players.team_id = teams.id AND teams.name LIKE 'New York Giants';
 
 SELECT players.name, players.salary FROM players, teams WHERE players.team_id = teams.id AND teams.name LIKE 'Green Bay Packers' ORDER BY salary ASC LIMIT 1;
+
+
+
+
+
+
+
+
+
+
+-- Flights
+SELECT * FROM airports WHERE airports.city = 'New York';
+SELECT * FROM airports WHERE airports.city = 'Paris';
+SELECT COUNT(*) FROM routes JOIN airports ON routes.origin_id = airports.id WHERE airports.city = 'New York';
+SELECT COUNT(*) FROM routes JOIN airports ON routes.dest_id = airports.id WHERE airports.city = 'Paris';

@@ -41,4 +41,5 @@ CREATE TABLE routes (
 
 SELECT * FROM airports WHERE airports.city = 'New York';
 SELECT * FROM airports WHERE airports.city = 'Paris';
--- SELECT COUNT(*) FROM routes WHERE routes.origin_id = airports.id 
+SELECT COUNT(*) FROM routes JOIN airports ON routes.origin_id = airports.id WHERE airports.city = 'New York';
+SELECT COUNT(*) FROM routes JOIN airports ON routes.dest_id = airports.id WHERE airports.city = 'Paris';
